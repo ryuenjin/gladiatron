@@ -16,6 +16,8 @@ public class Player_mov : MonoBehaviour
     Animator anim;//chama as animações
     protected bool Jump;
     private float JumpTime;//limitando o pulo do Tigas
+    public Transform chaoVerificador;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,10 @@ public class Player_mov : MonoBehaviour
 
     void Update()
     {
-
+        /*if (Input.anyKey == false)
+        {
+            anim.Play("animacao");
+        }*/
         var rigidbody = GetComponent<Rigidbody>();
         
         rigidbody.velocity = new Vector3(joystick.Horizontal * velocidade + Input.GetAxis("Horizontal") * velocidade,
@@ -36,26 +41,35 @@ public class Player_mov : MonoBehaviour
         //setando as animaçãoes do player
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetBool("Correndo", true);
+            anim.SetBool("animacao", true);
         }
         else
         {
-            anim.SetBool("Correndo", false);
+            anim.SetBool("animacao", false);
             
         }
-
-        
-
-        if (!Jump && (joybutton.Pressed || Input.GetButton("Fire2")))
+                
+        if (!Jump && (joybutton.Pressed || Input.GetButtonDown("Fire2")))
         {
             Jump = true;
             rigidbody.velocity += Vector3.up * 3f;
             
         }
-        if(Jump && (!joybutton.Pressed || Input.GetButton("Fire2")))
+        if(Jump && (!joybutton.Pressed || Input.GetButtonDown("Fire2")))
         {
             Jump = false;
         }
+        if (Input.GetButton("Fire1"))
+        {
+            anim.Play("Ataque01");
 
+        }
+
+       
+
+    }
+    private void FixedUpdate()
+    {
+        
     }
 }
