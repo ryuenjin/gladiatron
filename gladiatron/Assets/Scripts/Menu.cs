@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
+    public void CarregarCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
     public void CarregarFase1()
     {
         SceneManager.LoadScene("FASE1");

@@ -10,10 +10,13 @@ using UnityEngine.SceneManagement;
 public class Player_mov : MonoBehaviour
 {
     protected Joystick joystick;
+    protected JoystickPointer joystickPtr;
+    protected Attack attack;
     protected Joybutton joybutton;
     public float velocidade = 10; //velocidade de movimento
     public float VelMax = 200;
     Animator anim;//chama as animações
+    Rigidbody rigidbody;
     protected bool Jump;
     private float JumpTime;//limitando o pulo do Tigas
     public Transform chaoVerificador;
@@ -22,24 +25,51 @@ public class Player_mov : MonoBehaviour
     void Start()
     {
         joystick = FindObjectOfType<Joystick>();
+        joystickPtr = FindObjectOfType<JoystickPointer>();
+        attack = FindObjectOfType<Attack>();
         joybutton = FindObjectOfType<Joybutton>();
         anim = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
 
     void Update()
     {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f))
+        {
+            if (hit.transform.CompareTag("Chao"))
+            {
+                Jump = false;
+            }
+        }
+
         /*if (Input.anyKey == false)
         {
             anim.Play("animacao");
         }*/
-        var rigidbody = GetComponent<Rigidbody>();
+
+       Vector3 vel = new Vector3(
+           joystick.Horizontal * velocidade + Input.GetAxis("Horizontal") * velocidade,
+            0,
+            joystick.Vertical * velocidade + Input.GetAxis("Vertical") * velocidade
+            );
+
         
-        rigidbody.velocity = new Vector3(joystick.Horizontal * velocidade + Input.GetAxis("Horizontal") * velocidade,
-            rigidbody.velocity.y, joystick.Vertical * velocidade + Input.GetAxis("Vertical") * velocidade);
+        if (vel.magnitude > 0.1f)//direção do personagem 
+        {
+            Vector3 direcaoParaOlhar = transform.position + vel * 3;
+            transform.LookAt(direcaoParaOlhar);
+        }
+
+        //movimentação com animação d emovimento
+        rigidbody.velocity = new Vector3(vel.x, rigidbody.velocity.y, vel.z);
+
+        anim.SetBool("movimento", vel.magnitude > 0.1);
+
 
         //setando as animaçãoes do player
-        if (Input.GetKey(KeyCode.LeftShift))
+        /*if (Input.GetKey(KeyCode.LeftShift))
         {
             anim.SetBool("animacao", true);
         }
@@ -47,27 +77,42 @@ public class Player_mov : MonoBehaviour
         {
             anim.SetBool("animacao", false);
             
-        }
-                
-        if (!Jump && (joybutton.Pressed || Input.GetButtonDown("Fire2")))
+        }*/
+
+        bool botoesLivres = !joystickPtr.Pressed && !joybutton.Pressed && !attack.Pressed;
+
+        if (botoesLivres && Input.GetButtonDown("Fire2"))
         {
             Jump = true;
-            rigidbody.velocity += Vector3.up * 3f;
-            
-        }
-        if(Jump && (!joybutton.Pressed || Input.GetButtonDown("Fire2")))
+            Pulo();
+        } 
+        /*if(Jump &&(!joybutton.Pressed || Input.GetButtonDown("Fire2")))
         {
             Jump = false;
-        }
-        if (Input.GetButton("Fire1"))
-        {
-            anim.Play("Ataque01");
+        }*/
 
-        }
-
-       
+       if (botoesLivres && Input.GetButtonDown("Fire1"))
+       {
+            Ataque();
+       }
 
     }
+
+    public void Pulo()
+    {
+        if (!Jump)
+        {
+            rigidbody.velocity += Vector3.up * 3f;
+            Jump = true;
+            
+        }
+    }
+
+    public void Ataque()
+    {
+        anim.SetTrigger("ataque");
+    }
+
     private void FixedUpdate()
     {
         

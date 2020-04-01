@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Attack : MonoBehaviour, IPointerUpHandler, IPointerDownHandler 
 {
-    [HideInInspector]
+   // [HideInInspector]
     public bool Pressed;
 
     void Start()
