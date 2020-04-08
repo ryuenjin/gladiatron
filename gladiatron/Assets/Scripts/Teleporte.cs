@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+[SerializeField]
+
 [RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(AudioSource))]
+
 public class Teleporte : MonoBehaviour
 {
-
+    private string proximaCena;
     public Transform[] destinos;
     public AudioClip audioTeleporte;
     [Space(10)]
@@ -13,6 +17,11 @@ public class Teleporte : MonoBehaviour
     AudioSource emissorDeSom;
     bool rotinaIniciada = false;
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+            SceneManager.LoadScene("FASE2");
+    }
     void Awake()
     {
         emissorDeSom = GetComponent<AudioSource>();
@@ -30,6 +39,7 @@ public class Teleporte : MonoBehaviour
             {
                 other.transform.position = destinos[destino].position;
                 other.transform.rotation = destinos[destino].rotation;
+                
                 if (destruirAoColidir)
                 {
                     StartCoroutine("EsperarParaDestruir");
@@ -54,4 +64,6 @@ public class Teleporte : MonoBehaviour
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
+    
+
 }

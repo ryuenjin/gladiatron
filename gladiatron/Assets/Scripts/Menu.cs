@@ -9,13 +9,13 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Creditos");
     }
+    public void CarregarOPCOES()
+    {
+        SceneManager.LoadScene("OPCOES");
+    }
     public void CarregarFase1()
     {
         SceneManager.LoadScene("FASE1");
-    }
-    public void CarregarFase2()
-    {
-        SceneManager.LoadScene("FASE2");
     }
     public void VoltaMenu()
     {
