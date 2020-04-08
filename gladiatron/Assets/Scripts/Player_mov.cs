@@ -20,6 +20,15 @@ public class Player_mov : MonoBehaviour
     protected bool Jump;
     private float JumpTime;//limitando o pulo do Tigas
     public Transform chaoVerificador;
+    public Transform attackPoint; //ponto do ataque apartir da arma do personagem
+    public LayerMask enemyLayers;
+
+    public float attackRange = 0.5f; //distancia do ataque
+    public int attackDamage = 40; //dano do ataque
+
+    public float attackRate = 2f;
+    float nextAttackTime = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -111,6 +120,24 @@ public class Player_mov : MonoBehaviour
     public void Ataque()
     {
         anim.SetTrigger("ataque");
+        //Detectar os inimigos no alcance
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+        //Ataca-los
+        foreach (Collider enemy in hitEnemies)
+        {
+
+            enemy.GetComponent<Health>().TakeDamage(attackDamage);
+
+        }
+
+    }
+
+    void OnDrawGizmosSelected() //utilizado para criar uma esfera de onde o ataque ira partir, para determinar a distancia do ataque
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
     }
 
     private void FixedUpdate()
