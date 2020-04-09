@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587272, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -409,7 +409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 341, y: -280}
+  m_AnchoredPosition: {x: 374, y: -280}
   m_SizeDelta: {x: 638.5, y: 221.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475159343
@@ -443,7 +443,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Creditos
+  m_Text: "Cr\xE9ditos"
 --- !u!222 &475159344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 386, y: -746}
+  m_AnchoredPosition: {x: 386, y: -554}
   m_SizeDelta: {x: 637.48, y: 499.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179285067
@@ -903,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369, y: -147}
+  m_AnchoredPosition: {x: 369, y: -143}
   m_SizeDelta: {x: 644.5, y: 495.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586502716
