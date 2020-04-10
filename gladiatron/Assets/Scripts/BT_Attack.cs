@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class Attack : MonoBehaviour, IPointerUpHandler, IPointerDownHandler 
+public class BT_Attack : MonoBehaviour, IPointerUpHandler, IPointerDownHandler 
 {
    // [HideInInspector]
     public bool Pressed;

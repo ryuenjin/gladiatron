@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2026a41b4a2e70740a7ae016d6ed712a
+guid: c8531815200c2814a8d6288f2a7a71c4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -146,8 +146,15 @@ ModelImporter:
     4300016: Object01
     7400000: Default Take
     7400002: Ataque01
-    7400004: Correndo
-    7400006: Parado
+    7400004: Ataque02
+    7400006: Ataque03
+    7400008: Ataque04
+    7400010: Caindo
+    7400012: Correndo
+    7400014: Morrendo
+    7400016: Parado
+    7400018: Pulando
+    7400020: QuaseParado
     9500000: //RootNode
     13700000: cadnav
     13700002: cadnav_001
@@ -158,7 +165,6 @@ ModelImporter:
     13700012: Object01_001
     13700014: Object01_003
     13700016: WEP_DpSword_SKEL
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -186,125 +192,13 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Default Take
-      takeName: Default Take
-      firstFrame: 0
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Ataque01
-      takeName: Ataque01
-      firstFrame: -1
-      lastFrame: 12
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Correndo
-      takeName: Correndo
-      firstFrame: -1
-      lastFrame: 17
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Parado
-      takeName: Parado
-      firstFrame: -1
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 30
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -316,14 +210,14 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
+    preserveHierarchy: 1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.29999998
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
