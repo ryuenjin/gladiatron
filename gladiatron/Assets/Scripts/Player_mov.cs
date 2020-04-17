@@ -78,22 +78,14 @@ public class Player_mov : MonoBehaviour
 
 
         //setando as animaçãoes do player
-        /*if (Input.GetKey(KeyCode.LeftShift))
-        {
-            anim.SetBool("animacao", true);
-        }
-        else
-        {
-            anim.SetBool("animacao", false);
-            
-        }*/
-
         bool botoesLivres = !joystickPtr.Pressed && !joybutton.Pressed && !attack.Pressed;
 
         if (botoesLivres && Input.GetButtonDown("Fire2"))
         {
             Jump = true;
+
             Pulo();
+            anim.SetTrigger("pulo");
         } 
         /*if(Jump &&(!joybutton.Pressed || Input.GetButtonDown("Fire2")))
         {
@@ -144,4 +136,13 @@ public class Player_mov : MonoBehaviour
     {
         
     }
+            /*if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetBool("animacao", true);
+        }
+        else
+        {
+            anim.SetBool("animacao", false);
+            
+        }*/
 }
