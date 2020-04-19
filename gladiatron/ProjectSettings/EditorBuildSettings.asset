@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Creditos.unity
     guid: 556b16e154aba2d458658f5b1cd0de3b
   - enabled: 1
-    path: Assets/Scenes/FASE1.unity
+    path: Assets/Scenes/PLAYGROUND.unity
     guid: 297e1eacaf17f31419fe30884d935b1a
   - enabled: 1
     path: Assets/Scenes/FASE2.unity
