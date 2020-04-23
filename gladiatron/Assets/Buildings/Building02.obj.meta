@@ -5,12 +5,15 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: default
+    100004: Building02_root
     400000: //RootNode
     400002: default
+    400004: Building02_root
     2100000: Material
     2300000: default
     3300000: default
     4300000: default
+    6400000: default
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -45,7 +48,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -57,7 +60,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
+    preserveHierarchy: 1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
