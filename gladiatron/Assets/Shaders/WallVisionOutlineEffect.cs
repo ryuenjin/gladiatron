@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-/*[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class WallVisionOutlineEffect : ImageEffectBase {
 
 	public Shader occluderShader;
@@ -104,4 +104,3 @@ public class WallVisionOutlineEffect : ImageEffectBase {
 		base.OnDisable();
 	}
 }
-*/

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
-/*
+
 [CustomEditor (typeof(WallVisionOutlineEffect))]
 public class WallVisionOutlineEffectEditor : Editor {
 
@@ -68,4 +68,4 @@ public class WallVisionOutlineEffectEditor : Editor {
 
 		effect.rampTexture = rampTexture;
 	}
-}*/
+}
