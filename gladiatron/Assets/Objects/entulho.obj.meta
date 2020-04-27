@@ -1,20 +1,17 @@
 fileFormatVersion: 2
-guid: 649827a6891b2de428547402234fbc96
+guid: c2d4fb63af1cfa94eb6ed5e4d384f77b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
-    100004: entulho_root
     400000: default
     400002: //RootNode
-    400004: entulho_root
     2100000: Material
     2100002: Material.001
     2300000: default
     3300000: default
     4300000: default
-    6400000: default
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -48,7 +45,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -60,7 +57,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: fc61f6399c195f749820f5c317263903
+guid: 138de4dc6b16eff4bac854c75fe0970c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
-    100004: wire_root
     400000: default
     400002: //RootNode
-    400004: wire_root
     2100000: Material.001
     2300000: default
     3300000: default
     4300000: default
-    6400000: default
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -47,7 +44,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -59,7 +56,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

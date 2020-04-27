@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 838813ce094818440b1b86335a0d2cb2
+guid: a5556534b956bbd468839dcf899f2d9a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
-    100004: placaFlutuanteG2_root
     400000: default
     400002: //RootNode
-    400004: placaFlutuanteG2_root
     2100000: Material.007
     2300000: default
     3300000: default
     4300000: default
-    6400000: default
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -47,7 +44,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -59,7 +56,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
