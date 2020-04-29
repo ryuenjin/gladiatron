@@ -38,6 +38,11 @@ ModelImporter:
     100064: PES
     100066: ROSTO
     100068: TRONCO
+    100070: mixamorig_HeadTop_End_end
+    100072: mixamorig_LeftHand_end
+    100074: mixamorig_LeftToe_End_end
+    100076: mixamorig_RightHand_end
+    100078: mixamorig_RightToe_End_end
     400000: ARMA
     400002: Armature
     400004: BRACO
@@ -73,6 +78,11 @@ ModelImporter:
     400064: PES
     400066: ROSTO
     400068: TRONCO
+    400070: mixamorig_HeadTop_End_end
+    400072: mixamorig_LeftHand_end
+    400074: mixamorig_LeftToe_End_end
+    400076: mixamorig_RightHand_end
+    400078: mixamorig_RightToe_End_end
     2100000: None__ESPADA_dds
     2100002: None__MAOS1_png__MAOS1_png
     2100004: None__PES1_png__PES1_png
@@ -81,6 +91,14 @@ ModelImporter:
     2100010: None__TRONCO1_png__TRONCO1_png
     2100012: None__CABECA1_png__CABECA1_png
     2100014: None__BRACOS1_png_001__BRACOS1_png
+    2100016: No Name
+    2100018: None__MAOS1_png
+    2100020: None__PES1_png
+    2100022: None__PERNA1_png
+    2100024: None__ROSTO_png
+    2100026: None__TRONCO1_png
+    2100028: None__CABECA1_png
+    2100030: None__BRACOS1_png_001
     4300000: ARMA
     4300002: MAOS
     4300004: PES
@@ -104,6 +122,7 @@ ModelImporter:
     13700010: PES
     13700012: ROSTO
     13700014: TRONCO
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -324,7 +343,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.15
+    previousCalculatedGlobalScale: 0.5
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
