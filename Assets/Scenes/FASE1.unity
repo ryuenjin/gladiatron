@@ -1477,12 +1477,12 @@ PrefabInstance:
     - target: {fileID: 9187143929940678094, guid: 2e03ed2b834864045b5a4750f56e5446,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -543
+      value: -556.72
       objectReference: {fileID: 0}
     - target: {fileID: 9187143929940678094, guid: 2e03ed2b834864045b5a4750f56e5446,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 9187143929940678094, guid: 2e03ed2b834864045b5a4750f56e5446,
         type: 3}
@@ -11746,13 +11746,27 @@ GameObject:
   - component: {fileID: 2482360509187164993}
   - component: {fileID: 2482360509187164992}
   - component: {fileID: 2482360509187164995}
+  - component: {fileID: 2482360509187165006}
   m_Layer: 5
-  m_Name: Atacar
+  m_Name: BT_ATACAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2482360509187165006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482360509187165005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1572df3c08d644982126499b9d2776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pressed: 0
 --- !u!223 &2482360509286662946
 Canvas:
   m_ObjectHideFlags: 0
@@ -12217,7 +12231,7 @@ GameObject:
   - component: {fileID: 2482360510320121067}
   - component: {fileID: 2482360510320121066}
   m_Layer: 5
-  m_Name: Pulo
+  m_Name: BT_PULO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12545,7 +12559,7 @@ GameObject:
   - component: {fileID: 2550572715351487626}
   - component: {fileID: 2550572715351487625}
   m_Layer: 5
-  m_Name: COMBO
+  m_Name: BT_COMBO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12753,7 +12767,7 @@ GameObject:
   - component: {fileID: 2550572716707308758}
   - component: {fileID: 2550572716707308757}
   m_Layer: 5
-  m_Name: DASH
+  m_Name: BT_DASH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

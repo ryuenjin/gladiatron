@@ -11,8 +11,8 @@ public class Player_mov : MonoBehaviour
 {
     protected Joystick joystick;
     protected JoystickPointer joystickPtr;
-    protected Attack attack;
-    protected Joybutton joybutton;
+    protected BT_Attack BT_Attack;
+    protected BT_PULO BT_PULO;
     public float velocidade = 10; //velocidade de movimento
     public float VelMax = 200;
     Animator anim;//chama as animações
@@ -35,8 +35,8 @@ public class Player_mov : MonoBehaviour
     {
         joystick = FindObjectOfType<Joystick>();
         joystickPtr = FindObjectOfType<JoystickPointer>();
-        attack = FindObjectOfType<Attack>();
-        joybutton = FindObjectOfType<Joybutton>();
+        BT_Attack = FindObjectOfType<BT_Attack>();
+        BT_PULO = FindObjectOfType<BT_PULO>();
         anim = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
     }
@@ -78,7 +78,7 @@ public class Player_mov : MonoBehaviour
 
 
         //setando as animaçãoes do player
-        bool botoesLivres = !joystickPtr.Pressed && !joybutton.Pressed && !attack.Pressed;
+        bool botoesLivres = !joystickPtr.Pressed && !BT_PULO.Pressed && !BT_Attack.Pressed;
 
         if (botoesLivres && Input.GetButtonDown("Fire2"))
         {

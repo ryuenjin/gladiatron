@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Pulo : MonoBehaviour
 {
+    protected BotoesLivres BotoesLivres;
 
     Animator anim;//chama as animações
     Rigidbody rigidbody;
@@ -14,9 +15,10 @@ public class Player_Pulo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         rigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        BotoesLivres = GetComponent<BotoesLivres>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class Player_Pulo : MonoBehaviour
                 Jump = false;
             }
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (BotoesLivres && Input.GetButtonDown("Fire2"))
         {
             Jump = true;
             anim.SetTrigger("Caindo");

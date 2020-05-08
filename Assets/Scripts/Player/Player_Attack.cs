@@ -6,7 +6,7 @@ public class Player_Attack : MonoBehaviour
 {
     Animator anim;//chama as animações
     Rigidbody rigidbody;
-    protected Attack attack;
+    protected BT_Attack BT_Attack;
     public Transform attackPoint; //ponto do ataque apartir da arma do personagem
     public LayerMask enemyLayers;
 
@@ -16,29 +16,26 @@ public class Player_Attack : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0;
 
-    //botoes livres
-    protected Joystick joystick;
-    protected JoystickPointer joystickPtr;
-    protected Joybutton joybutton;
+    protected BotoesLivres BotoesLivres;
 
     // Start is called before the first frame update
     void Start()
     {
-        attack = FindObjectOfType<Attack>();
+        BT_Attack = FindObjectOfType<BT_Attack>();
         anim = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
-        //botoes livres
-        joystick = FindObjectOfType<Joystick>();
-        joystickPtr = FindObjectOfType<JoystickPointer>();
+        BotoesLivres = GetComponent<BotoesLivres>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // verifica se tem botão pressionado
-        // bool botoesLivres = !joystickPtr.Pressed && !joybutton.Pressed && !attack.Pressed; 
+        //chama BotoesLivres
+        // bool botoesLivres = !joystickPtr.Pressed && !BT_PULO.Pressed && !BT_Attack.Pressed;
+        
 
-        if (Input.GetButtonDown("Fire1"))
+        if (BotoesLivres && Input.GetButtonDown("Fire1"))
         {
             Ataque();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_mov_Joy : MonoBehaviour
 {
     protected Joystick joystick;
-    protected Joybutton joybutton;
+    
     public float Velocidade = 30;// velocidade de movimento
     public float VelMax = 200;
     Animator anim;
@@ -16,7 +16,7 @@ public class Player_mov_Joy : MonoBehaviour
     void Start()
     {
         joystick = FindObjectOfType<Joystick>();
-        joybutton = FindObjectOfType<Joybutton>();
+        
         anim = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
     }
@@ -24,20 +24,6 @@ public class Player_mov_Joy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //codigo antigo de movimento
-        /*var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.velocity = new Vector3(joystick.Horizontal * Velocidade + Input.GetAxis("Horizontal") * Velocidade, rigidbody.velocity.y, joystick.Vertical * Velocidade + Input.GetAxis("Vertical") * Velocidade);
-
-        //setando animação de movimento
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            anim.SetBool("Parado",true);
-        }
-        else
-        {
-            anim.SetBool("Parado",false);
-        }*/
-
         Vector3 vel = new Vector3(
          joystick.Horizontal * Velocidade + Input.GetAxis("Horizontal") * Velocidade,
           0,
