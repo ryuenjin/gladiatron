@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SPAW
-  m_Shader: {fileID: 4800000, guid: 3ac30505729564249973dfc428f1c8fc, type: 3}
+  m_Shader: {fileID: 4800000, guid: bdc87fb8ba4c0604f960b7c952d18d30, type: 3}
   m_ShaderKeywords: _DISSOLVEALPHASOURCE_CUSTOM_MAP _DISSOLVEEDGETEXTURESOURCE_NONE
     _DISSOLVEGLOBALCONTROL_NONE _DISSOLVEMAPPINGTYPE_NORMAL _DISSOLVEMASKCOUNT_ONE
     _DISSOLVEMASK_NONE
@@ -77,10 +77,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecularMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cull: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _DetailNormalMapScale: 1
     - _DissolveAlphaSource: 1
     - _DissolveAlphaSourceTexturesUVSet: 0
@@ -126,6 +130,8 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
+    - _Specular: 0
+    - _SpecularAlpha: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
@@ -140,3 +146,4 @@ Material:
     - _DissolveMaskPosition: {r: 0, g: 0, b: 0, a: 0}
     - _Dissolve_ObjectWorldPos: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

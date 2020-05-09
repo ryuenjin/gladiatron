@@ -17,9 +17,21 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("FASE1");
     }
-    public void CarregarPLAYGROUND()
+    public void CarregarPLAYGROUND1()
     {
-        SceneManager.LoadScene("PLAYGROUND");
+        SceneManager.LoadScene("PLAYGROUND1");
+    }
+    public void CarregarPLAYGROUND2()
+    {
+        SceneManager.LoadScene("PLAYGROUND2");
+    }
+    public void CarregarPLAYGROUND3()
+    {
+        SceneManager.LoadScene("PLAYGROUND3");
+    }
+    public void CarregarPLAYGROUND4()
+    {
+        SceneManager.LoadScene("PLAYGROUND4");
     }
     public void CarregarTESTE()
     {
