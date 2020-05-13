@@ -9,6 +9,7 @@ public class Player_Attack : MonoBehaviour
     protected BT_Attack BT_Attack;
     public Transform attackPoint; //ponto do ataque apartir da arma do personagem
     public LayerMask enemyLayers;
+    public AudioSource somAttack;
 
     public float attackRange = 0.5f; //distancia do ataque
     public int attackDamage = 40; //dano do ataque
@@ -40,7 +41,11 @@ public class Player_Attack : MonoBehaviour
             Ataque();
         }
     }
-    
+
+    public void Dano(int amount) //cura vida do player
+    {
+        attackDamage += amount;
+    }
     public void Ataque()
         {
             anim.SetTrigger("Ataque01");
@@ -63,6 +68,11 @@ public class Player_Attack : MonoBehaviour
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 
         }
+    public void Attack()
+    {
+        somAttack.Play();
+
+    }
     private void FixedUpdate()
     {
 

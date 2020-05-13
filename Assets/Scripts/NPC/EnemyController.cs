@@ -8,18 +8,18 @@ public class EnemyController : MonoBehaviour
 {
     public Animator animator;
 
-    public Transform attackPoint;
-    public LayerMask playerLayers;
+    public Transform attackPoint; //definição para area de ataque
+    public LayerMask playerLayers; //layer para definição de objeto
 
-    public float lookRadius = 10f; 
+    public float lookRadius = 10f; //raio que o inimigo irá olhar para começar a seguir o jogador
     Transform target;
     NavMeshAgent agent;
 
     public float attackRange = 0.5f; //distancia do ataque
-    public int attackDamage = 40;
+    public int attackDamage = 40; //dano do ataque
 
-    public float attackRate = 2f;
-    float nextAttackTime = 0;
+    public float attackRate = 2f; //velocidade do ataque
+    float nextAttackTime = 0; //proximo ataque que é uma definição para velocidade do ataque
 
 
 
@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
             if(distance <= agent.stoppingDistance)
             {
                 FaceTarget();
-                Attack();
+                
             }
         }
 
@@ -61,7 +61,7 @@ public class EnemyController : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-        Attack();
+        
         
     }
 

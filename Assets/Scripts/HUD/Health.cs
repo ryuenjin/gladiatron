@@ -25,6 +25,11 @@ public class Health : MonoBehaviour
     {
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
+
+        if(currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
 
     public void SetMaxHealth(int health) 
