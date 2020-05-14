@@ -2705,6 +2705,75 @@ Transform:
   m_Father: {fileID: 579130875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &675071478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.87982
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -144.48663
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626354, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289792935632626355, guid: 5229e82ef5f15f747aaad4633a2162a1,
+        type: 3}
+      propertyPath: m_Name
+      value: PORTAIS
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5229e82ef5f15f747aaad4633a2162a1, type: 3}
 --- !u!1 &676666267
 GameObject:
   m_ObjectHideFlags: 0
@@ -11521,7 +11590,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2482360509286662959}
-        m_MethodName: SairAPK
+        m_MethodName: VoltaMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18550,7 +18619,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1
-  somAttack: {fileID: 6287869480578846055}
+  somAtaque: {fileID: 0}
   attackRange: 2.09
   attackDamage: 40
   attackRate: 2

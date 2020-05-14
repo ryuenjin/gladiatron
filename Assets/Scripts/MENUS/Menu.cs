@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public void CarregarCUT()
+    {
+        SceneManager.LoadScene("CUTSCENE");
+    }
     public void CarregarCreditos()
     {
         SceneManager.LoadScene("Creditos");

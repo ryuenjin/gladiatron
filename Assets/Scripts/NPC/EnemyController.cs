@@ -36,27 +36,26 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if(distance <= lookRadius) //aqui é usado para dizer a distancia do inimigo que correrá atras do jogador
+        if (distance <= lookRadius) //aqui é usado para dizer a distancia do inimigo que correrá atras do jogador
         {
             agent.SetDestination(target.position);
 
-            if(distance <= agent.stoppingDistance)
+            if (distance <= agent.stoppingDistance)
             {
+
                 FaceTarget();
-                
+                if (Time.time >= nextAttackTime)
+                {
+
+                    nextAttackTime = Time.time + 1f / attackRate;
+                    Attack();
+                }
+
             }
         }
-
-        if (Time.time >= nextAttackTime)
-        {
-           
-           nextAttackTime = Time.time + 1f / attackRate;
-            Attack();
-        }
-
     }
 
-    void FaceTarget() //função utilizada para objeto virar a face para o jogador
+        void FaceTarget() //função utilizada para objeto virar a face para o jogador
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
