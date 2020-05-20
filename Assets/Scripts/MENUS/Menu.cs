@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void CarregarCUT()
-    {
-        SceneManager.LoadScene("CUTSCENE");
-    }
     public void CarregarCreditos()
     {
         SceneManager.LoadScene("Creditos");
@@ -21,21 +17,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("FASE1");
     }
-    public void CarregarPLAYGROUND1()
+    public void CarregarPLAYGROUND()
     {
-        SceneManager.LoadScene("PLAYGROUND1");
-    }
-    public void CarregarPLAYGROUND2()
-    {
-        SceneManager.LoadScene("PLAYGROUND2");
-    }
-    public void CarregarPLAYGROUND3()
-    {
-        SceneManager.LoadScene("PLAYGROUND3");
-    }
-    public void CarregarPLAYGROUND4()
-    {
-        SceneManager.LoadScene("PLAYGROUND4");
+        SceneManager.LoadScene("PLAYGROUND");
     }
     public void CarregarTESTE()
     {

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
 {
+    public AudioSource somAtaque;
     Animator anim;//chama as animações
     Rigidbody rigidbody;
     protected BT_Attack BT_Attack;
     public Transform attackPoint; //ponto do ataque apartir da arma do personagem
     public LayerMask enemyLayers;
-    public AudioSource somAtaque;
 
     public float attackRange = 0.5f; //distancia do ataque
     public int attackDamage = 40; //dano do ataque
@@ -54,9 +54,7 @@ public class Player_Attack : MonoBehaviour
             //Ataca-los
             foreach (Collider enemy in hitEnemies)
             {
-
                 enemy.GetComponent<Health>().TakeDamage(attackDamage);
-
             }
 
         }
@@ -71,10 +69,6 @@ public class Player_Attack : MonoBehaviour
     public void SAtaque()
     {
         somAtaque.Play();
-
-    }
-    private void FixedUpdate()
-    {
 
     }
 

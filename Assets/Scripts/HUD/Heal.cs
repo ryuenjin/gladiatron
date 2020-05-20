@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Heal : MonoBehaviour
 {
-    public LayerMask playerLayers;
-
+    
+    
     int curar = 50;
 
     // Start is called before the first frame update
     void Start()
     {
+        
 
     }
 
@@ -24,15 +25,16 @@ public class Heal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)// função para dar dano
     {
-
-       other.gameObject.GetComponent<Health>().Cura(curar);
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<Health>().Cura(curar);
+        }
         DestroyGameObject();
-
     }
 
     public virtual void DestroyGameObject()
     {
-        Destroy(gameObject,0.5f);
+        Destroy(gameObject,0.2f);
     }
 
 }

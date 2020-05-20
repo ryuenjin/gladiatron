@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_mov_Joy : MonoBehaviour
 {
     protected Joystick joystick;
-    public AudioSource [] somPassos;
-    
+    public AudioSource[] somPassos;
     public float Velocidade = 30;// velocidade de movimento
     public float VelMax = 200;
     Animator anim;
@@ -41,12 +40,11 @@ public class Player_mov_Joy : MonoBehaviour
 
         anim.SetBool("Correndo", vel.magnitude > 0.1);
     }
-    public void Passos()
+    public void Correndo()
     {
         if (!somPassos[0].isPlaying)
             somPassos[0].Play();
         else
             somPassos[1].Play();
     }
-
 }

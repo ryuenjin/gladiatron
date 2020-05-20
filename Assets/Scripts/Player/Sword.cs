@@ -31,13 +31,11 @@ public class Sword : MonoBehaviour
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
                 OnSpaceDown();
-
             }else
             {
                 s_ObjectCollider.isTrigger = false;
             }
         }
-
     }
 
     public void OnSpaceDown()

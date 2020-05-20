@@ -9,10 +9,10 @@ public class Health : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+   
 
     public int maxHealth; //vida maxima
     public int currentHealth; // vida atual
-    public int takeDamage;
 
     public Health healthBar;
 
@@ -42,6 +42,7 @@ public class Health : MonoBehaviour
     public void Cura(int amount) //cura vida do player
     {
         currentHealth += amount;
+
     }
 
     public void TakeDamage(int damage) //recebe dano
@@ -61,7 +62,6 @@ public class Health : MonoBehaviour
     public virtual void Die()//função virtual para informar que o objeto morreu
     {
         Debug.Log(transform.name + " Died");
-    
     }
     public virtual void DestroyGameObject()
     {
