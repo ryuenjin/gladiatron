@@ -17,13 +17,13 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("FASE1");
     }
-    public void CarregarPLAYGROUND()
+    public void CarregarPLAYGROUND2()
     {
-        SceneManager.LoadScene("PLAYGROUND");
+        SceneManager.LoadScene("PLAYGROUND2");
     }
-    public void CarregarTESTE()
+    public void CarregarCUTSCENE()
     {
-        SceneManager.LoadScene("TESTE");
+        SceneManager.LoadScene("CUTSCENE");
     }
     public void VoltaMenu()
     {

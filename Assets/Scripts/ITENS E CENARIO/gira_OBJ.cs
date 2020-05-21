@@ -5,7 +5,8 @@ using UnityEngine;
 public class gira_OBJ : MonoBehaviour
 {
     public float OBJspeed;
-    public float OBJspeedRot;
+    public float RotX,RotY,RotZ;
+    
 
     void Start()
     {
@@ -14,8 +15,9 @@ public class gira_OBJ : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * OBJspeed * Time.deltaTime);
+       transform.Translate(Vector3.left * OBJspeed * Time.deltaTime);
+       transform.Rotate( 0,1 * Time.deltaTime * RotX, RotY);
 
-        transform.Rotate( 0,10 * Time.deltaTime * OBJspeedRot, 0);
+
     }
 }
