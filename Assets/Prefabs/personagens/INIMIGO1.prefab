@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 793090598549186331}
   - component: {fileID: 793090598549186330}
   m_Layer: 9
-  m_Name: Fill
+  m_Name: EFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2064,7 +2064,7 @@ GameObject:
   - component: {fileID: 793090600541412708}
   - component: {fileID: 793090600541412710}
   - component: {fileID: 793090598750124438}
-  - component: {fileID: 793090598750124439}
+  - component: {fileID: 7420120514955762824}
   m_Layer: 15
   m_Name: INIMIGO1
   m_TagString: Enemy
@@ -2184,7 +2184,7 @@ MonoBehaviour:
   attackRange: 5.21
   attackDamage: 15
   attackRate: 1.5
---- !u!114 &793090598750124439
+--- !u!114 &7420120514955762824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2193,31 +2193,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 793090598750124443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a46a22f75b1b36449ab57fef157a5f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 07da31c9a83f35c4b90a2424f00d281c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 793090600061183469}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.95224696, b: 0, a: 1}
-    key2: {r: 0, g: 1, b: 0.33395624, a: 1}
-    key3: {r: 0, g: 1, b: 0.33395624, a: 0}
+    key1: {r: 0.95129585, g: 1, b: 0, a: 1}
+    key2: {r: 0, g: 1, b: 0.07410216, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 32768
+    ctime1: 30840
     ctime2: 65535
-    ctime3: 65535
+    ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 32768
-    atime2: 65535
+    atime1: 65535
+    atime2: 0
     atime3: 0
     atime4: 0
     atime5: 0
@@ -2225,11 +2225,11 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
+    m_NumAlphaKeys: 2
   fill: {fileID: 793090598549186330}
-  maxHealth: 500
-  currentHealth: 0
-  healthBar: {fileID: 793090600061183468}
+  maxEHealth: 500
+  currentEHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &793090598871741724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,10 +2313,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793090600061183459}
-  - component: {fileID: 793090600061183468}
   - component: {fileID: 793090600061183469}
+  - component: {fileID: 8461967504887933678}
   m_Layer: 15
-  m_Name: Health bar
+  m_Name: EHealth bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2343,52 +2343,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0067691803, y: -0.0005028248}
   m_SizeDelta: {x: -4.034106, y: -2.6064446}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &793090600061183468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793090600061183458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a46a22f75b1b36449ab57fef157a5f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 793090600061183469}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.95224696, b: 0, a: 1}
-    key2: {r: 0, g: 1, b: 0.33395624, a: 1}
-    key3: {r: 0, g: 1, b: 0.33395624, a: 1}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 32768
-    ctime2: 65535
-    ctime3: 65535
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 32768
-    atime2: 65535
-    atime3: 65535
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
-  fill: {fileID: 793090598549186330}
-  maxHealth: 100
-  currentHealth: 100
-  healthBar: {fileID: 793090600061183468}
 --- !u!114 &793090600061183469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,6 +2393,52 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8461967504887933678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793090600061183458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07da31c9a83f35c4b90a2424f00d281c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 793090600061183469}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 1, b: 0, a: 1}
+    key2: {r: 0, g: 1, b: 0.065570354, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 30840
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 793090598549186330}
+  maxEHealth: 100
+  currentEHealth: 100
+  healthBar: {fileID: 0}
 --- !u!1 &912424969456673085
 GameObject:
   m_ObjectHideFlags: 0

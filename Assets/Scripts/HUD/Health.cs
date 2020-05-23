@@ -9,7 +9,8 @@ public class Health : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-   
+
+    Animator anim;//chama as animações
 
     public int maxHealth; //vida maxima
     public int currentHealth; // vida atual
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -54,6 +56,7 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
             Die();
+            anim.SetTrigger("Morrendo");
             DestroyGameObject(); //destroi o game object, depois trocar para animação de morrer
         }
            

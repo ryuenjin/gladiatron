@@ -9,6 +9,8 @@ TagManager:
   - Fx
   - Musicas
   - minimapa
+  - porta
+  - chave
   layers:
   - Default
   - TransparentFX

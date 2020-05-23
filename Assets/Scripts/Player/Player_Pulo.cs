@@ -33,7 +33,7 @@ public class Player_Pulo : MonoBehaviour
                 Jump = false;
             }
         }
-        if (BotoesLivres && Input.GetButtonDown("Fire2"))
+        if (BotoesLivres && Input.GetButtonDown("Jump"))
         {
             Jump = true;
             anim.SetTrigger("Caindo");
