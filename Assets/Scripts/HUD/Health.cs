@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Health : MonoBehaviour
@@ -58,6 +59,7 @@ public class Health : MonoBehaviour
             Die();
             anim.SetTrigger("Morrendo");
             DestroyGameObject(); //destroi o game object, depois trocar para animação de morrer
+            VaiGAMEOVER();
         }
            
     }
@@ -76,5 +78,8 @@ public class Health : MonoBehaviour
         slider.value = Health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
-
+    public void VaiGAMEOVER()
+    {
+        SceneManager.LoadScene("GAMEOVER");
+    }
 }

@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 
 public class EHealth : MonoBehaviour
 {
+    public int PONTO_MORTE = 1;
     public Slider Eslider;
     public Gradient Egradient;
     public Image Efill;
 
-    public GameObject DROP; //escolhe o objeto CHAVE ser dropado
+    //public GameObject DROP; //escolhe o objeto CHAVE ser dropado
     Animator anim;//chama as animações
 
     public int maxEHealth; //vida maxima
@@ -55,11 +58,11 @@ public class EHealth : MonoBehaviour
         
         if (currentEHealth <= 0)
         {
-            //DROP.SetActive(true); // dropa a CHAVE
+            ContPontos.PONTOS += PONTO_MORTE;
             currentEHealth = 0;
+            anim.SetBool("EMorrendo", true);
             Die();
-            anim.SetTrigger("EMorrendo");
-            DestroyGameObject(); //destroi o game object, depois trocar para animação de morrer
+            SOME(); //destroi o game object, depois trocar para animação de morrer
             
         }
            
@@ -69,10 +72,15 @@ public class EHealth : MonoBehaviour
     {
         Debug.Log(transform.name + " Died");
     }
-    public virtual void DestroyGameObject()
+    public virtual void SOME()
     {
+        // DROP.SetActive(true);
+        // GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        Destroy(gameObject,5);
+
         
-        
+
     }
 
     public void SetEHealth(int EHealth) //um slider e um gradiente para mexer na barra de vida

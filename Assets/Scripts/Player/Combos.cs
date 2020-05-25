@@ -36,14 +36,10 @@ public class Combos : MonoBehaviour
             return;
         }
 
-
-
         if (AtualHit < Ataques.Length)
         {
             if (QuantClick < 1)
             {
-
-
 
                 if (AtualHit > 0)
                 {
@@ -90,7 +86,7 @@ public class Combos : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Fire2"))
         {
             combo();
         }
