@@ -10,11 +10,12 @@ public class DestroyPorta : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            Destroy(this.gameObject);
+            
             //Destroy(this.transform.parent.gameObject);
            // Destroy(GameObject.Find("porta"));
            PORTA.SetActive(false);
             //Destroy(PORTA);
+            Destroy(this.gameObject);
         }
     }
 }

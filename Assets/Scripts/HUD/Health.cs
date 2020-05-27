@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     public Image fill;
 
     Animator anim;//chama as animações
+    public GameObject SomePlayer;
 
     public int maxHealth; //vida maxima
     public int currentHealth; // vida atual
@@ -58,7 +59,8 @@ public class Health : MonoBehaviour
             currentHealth = 0;
             Die();
             anim.SetTrigger("Morrendo");
-            DestroyGameObject(); //destroi o game object, depois trocar para animação de morrer
+            //DestroyGameObject(); //destroi o game object, depois trocar para animação de morrer
+            SomePlayer.SetActive(false);
             VaiGAMEOVER();
         }
            

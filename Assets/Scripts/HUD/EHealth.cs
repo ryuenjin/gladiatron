@@ -4,6 +4,7 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class EHealth : MonoBehaviour
@@ -77,7 +78,7 @@ public class EHealth : MonoBehaviour
         // DROP.SetActive(true);
         // GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-        Destroy(gameObject,5);
+        Destroy(gameObject);
 
         
 

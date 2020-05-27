@@ -5,7 +5,7 @@ using UnityEngine;
 public class ContPontos : MonoBehaviour
 {
     public static int PONTOS;
-    public GameObject DROP1; //escolhe o objeto CHAVE ser dropado
+    public GameObject DROP1, DROP2, DROP3, DROP4; //escolhe o objeto CHAVE ser dropado
     void Awake()
     {
         PONTOS = 0;
@@ -21,10 +21,21 @@ public class ContPontos : MonoBehaviour
     }
     public void DROP_ITEM()
     {
-        if(PONTOS >= 2)
+        if(PONTOS >= 3)
         {
          DROP1.SetActive(true); // dropa a CHAVE
         }
-        
+        if (PONTOS >= 6)
+        {
+            DROP2.SetActive(true); // dropa a CHAVE
+        }
+        if (PONTOS >= 9)
+        {
+            DROP3.SetActive(true); // dropa a CHAVE
+        }
+        if (PONTOS >= 12)
+        {
+            DROP4.SetActive(true); // dropa a CHAVE
+        }
     }
 }

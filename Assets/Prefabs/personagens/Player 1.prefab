@@ -785,6 +785,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 3
   fill: {fileID: 9147918419794489359}
+  SomePlayer: {fileID: 0}
   maxHealth: 500
   currentHealth: 0
   healthBar: {fileID: 9147918420201266460}
@@ -3418,7 +3419,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9147918420201266462}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3492,7 +3493,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9147918420201266462}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3708,8 +3709,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9147918418843644490}
   - {fileID: 9147918419794489358}
+  - {fileID: 9147918418843644490}
   m_Father: {fileID: 9147918420138764133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3761,6 +3762,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 3
   fill: {fileID: 9147918419794489359}
+  SomePlayer: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 9147918420201266460}
